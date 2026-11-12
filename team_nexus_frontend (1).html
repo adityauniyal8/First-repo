@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Nexus | Group Finder</title>
+  <link rel="stylesheet" href="team_nexus_style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">TN</span><span>Team<span class="brand-accent">Nexus</span></span></a>
+    <nav>
+      <a class="active" href="#dashboard">Dashboard</a>
+      <a href="#students">Students</a>
+      <a href="#groups">Groups</a>
+      <a href="#requests">Requests</a>
+    </nav>
+    <div class="profile"><span class="avatar">AK</span><span class="profile-name">Aaditya</span></div>
+  </header>
+
+  <main class="container" id="dashboard">
+    <section class="welcome">
+      <div>
+        <p class="eyebrow">STUDENT COLLABORATION PLATFORM</p>
+        <h1>Find your people.<br><span>Build something great.</span></h1>
+        <p class="welcome-copy">Discover teams, connect with students, and find the right people for your next tech event.</p>
+        <a class="primary-btn" href="#groups">Explore groups <span>→</span></a>
+      </div>
+      <div class="welcome-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="art-card card-top"><span class="art-icon">✦</span><span>Ideas become projects</span></div>
+        <div class="art-center"><span>TN</span></div>
+        <div class="art-card card-bottom"><span class="mini-avatars"><i>A</i><i>R</i><i>S</i></span><span>Better together</span></div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <article class="stat-card"><div class="stat-icon purple">♙</div><div><p>Total students</p><strong id="studentCount">36</strong></div></article>
+      <article class="stat-card"><div class="stat-icon blue">▦</div><div><p>Active groups</p><strong id="groupCount">15</strong></div></article>
+      <article class="stat-card"><div class="stat-icon orange">↗</div><div><p>Open spots</p><strong>24</strong></div></article>
+      <article class="stat-card"><div class="stat-icon green">✓</div><div><p>My requests</p><strong id="requestCount">0</strong></div></article>
+    </section>
+
+    <section class="section" id="groups">
+      <div class="section-heading">
+        <div><p class="eyebrow">GET STARTED</p><h2>Find your team</h2><p class="muted">Browse groups looking for new teammates.</p></div>
+        <div class="search-wrap"><span>⌕</span><input id="searchInput" type="search" placeholder="Search by group, skill or event..." aria-label="Search groups"></div>
+      </div>
+      <div class="filter-row">
+        <button class="filter active" data-filter="All">All groups</button>
+        <button class="filter" data-filter="AI/ML">AI / ML</button>
+        <button class="filter" data-filter="Web Development">Web development</button>
+        <button class="filter" data-filter="App Development">App development</button>
+        <button class="filter" data-filter="Design">Design</button>
+      </div>
+      <div class="group-grid" id="groupGrid"></div>
+    </section>
+
+    <section class="section lower-grid" id="students">
+      <div class="panel">
+        <div class="panel-heading"><div><p class="eyebrow">COMMUNITY</p><h2>Students</h2></div><span class="small-tag">Sample directory</span></div>
+        <div class="student-list" id="studentList"></div>
+      </div>
+      <div class="panel" id="requests">
+        <div class="panel-heading"><div><p class="eyebrow">YOUR ACTIVITY</p><h2>Join requests</h2></div><span class="request-badge" id="requestBadge">0 pending</span></div>
+        <div id="requestList" class="request-list"><div class="empty-state"><span>✉</span><p>No requests yet</p><small>Send a request to a group to see it here.</small></div></div>
+      </div>
+    </section>
+    <footer>© 2026 Team Nexus <span>Find teammates. Share skills. Build together.</span></footer>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="web.js" defer></script>
+</body>
+</html>
